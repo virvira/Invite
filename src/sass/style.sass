@@ -1,0 +1,523 @@
+@import "~bootstrap/scss/bootstrap";
+
+@font-face
+	font-family: 'GothamBook'
+	src: url('../fonts/GothamBook.ttf')
+	
+@font-face
+	font-family: 'GothamBold'
+	src: url('../fonts/GothamBold.ttf')
+	
+@font-face
+	font-family: 'GothamMedium'
+	src: url('../fonts/GothamMedium.ttf')
+	
+@font-face
+	font-family: 'OpenSansBold'
+	src: url('../fonts/OpenSansBold.ttf')
+	
+@font-face
+	font-family: 'OpenSansRegular'
+	src: url('../fonts/OpenSansRegular.ttf')
+	
+@font-face
+	font-family: 'RobotoBold'
+	src: url('../fonts/RobotoBold.ttf')
+	
+@font-face
+	font-family: 'RobotoRegular'
+	src: url('../fonts/RobotoRegular.ttf')
+	
+@font-face
+	font-family: 'RobotoBoldCondensed'
+	src: url('../fonts/RobotoBoldCondensed.ttf')
+	
+@font-face
+	font-family: 'MyriadProRegular'
+	src: url('../fonts/MyriadProRegular.ttf')
+	
+@mixin centerer 
+	position: absolute
+	left: 50%
+	transform: translate(-50%, -50%)
+	
+.sticky 
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 1000
+	background-size: cover
+	background-image: url("../img/creatives.png")
+	background-color: #454444
+	@media (max-width: 991.98px)
+		position: relative
+	
+.btn 
+	color: #fff
+	background: #11749e
+	text-decoration: none
+	text-transform: uppercase
+	font-family: 'GothamBook'
+	border-radius: 0
+	&:hover
+		background: darken(#11749e,8%)
+		transition: all 0.3s ease
+		color: #fff
+	&:active
+		background: darken(#11749e,25%)
+		color: #fff
+
+.dot
+	border-radius: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+
+body
+	font-family: 'GothamBook'
+	font-size: 20px
+
+header
+	border-bottom: 2px solid rgba(122, 122, 122, .62)
+	font-family: 'MyriadProRegular'
+	@media screen and (max-width: 991.98px)
+		font-size: 16px
+	@media screen and (max-width: 767.98px)
+		font-size: 14px
+
+.creative
+	padding-bottom: 106px
+	background-size: cover
+	background-image: url("../img/creatives.png")
+	background-color: #000000
+	&__pres
+		margin-top: 235px
+		margin-bottom: 100px
+		text-align: center
+	&__pres-title
+		line-height: 152px
+		color: #fff
+		font-family: 'GothamBold'
+		font-size: 152px
+		text-transform: uppercase
+		@media screen and (min-width: 991.98px) and (max-width: 1199.98px) 
+			font-size: 120px
+			line-height: 130px
+		@media screen and (max-width: 991.98px)
+			font-size: 90px
+			line-height: 100px
+	&__pres-subtitle
+		padding: 0 auto
+		font-family: 'GothamMedium'
+		font-size: 25px
+		text-transform: uppercase
+		color: #11749e
+		letter-spacing: 0.8em
+		@media screen and (max-width: 991.98px)
+			font-size: 20px
+			
+	&__down
+		display: flex
+		flex-direction: column
+		align-items: center
+		color: #fff
+	&__down-desc
+		margin-bottom: 20px
+		@media screen and (max-width: 991.98px)
+			font-size: 16px
+	&__down-icon
+		height: 65px
+		width: 65px
+		border: 1px solid white
+		cursor: pointer
+		
+	
+.main-header
+	width: 100%
+	color: #fff
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&__logo
+		padding-top: 8px
+	&__logo-square1
+		height: 67px
+		width: 67px
+		background: #cecece
+		opacity: 0.75
+		margin-left: 12px
+		position: relative
+	&__logo-square2
+		top: -8px
+		position: absolute
+		height: 67px
+		width: 67px
+		background: #11749e
+		display: flex
+		justify-content: center
+		align-items: center
+		color: #fff
+		font-size: 30px
+		font-family: 'OpenSansBold'
+	&__menu
+		display: flex
+		justify-content: space-between
+		padding-right: 25px
+		@media screen and (max-width: 1199.98px)
+			padding-right: 0
+	&__menu a
+		color: #fff
+		text-decoration: none
+	&__menu-elem
+		height: 110px
+		display: flex
+		align-items: center
+		padding-right: 15px
+		padding-left: 15px
+		&:hover
+			border-bottom: 6px solid #11749e
+	&__icons
+		display: flex
+		justify-content: space-between
+		@media screen and (max-width: 1199.98px)
+			display: none
+  
+.weare
+	padding-top: 160px
+	padding-bottom: 120px
+	background-color: #11749e
+	color: #fff
+	position: relative
+	&:before
+		content: 'W'
+		font-size: 247px
+		font-family: 'RobotoBoldCondensed'
+		color: #fff
+		opacity: 0.18
+		top: 190px
+		@include centerer
+	&__title
+		font-family: 'GothamMedium'
+		font-size: 38px
+		text-transform: uppercase
+		text-align: center
+	&__features
+		margin-top: 135px
+		display: flex
+	&__features-feature
+		max-width: 270px
+		margin: 0 auto
+	&__features-feature-wrapper
+		display: flex
+		justify-content: center
+	&__features-feature-icon
+		height: 130px
+		width: 130px
+		background-color: #2e85aa
+		.fa-edit, .fa-search, .fa-comment
+			width: 40px
+			height: 40px
+	&__features-feature-title
+		font-family: 'GothamMedium'
+		font-size: 18px
+		text-transform: uppercase
+		padding-top: 15px
+		padding-bottom: 20px
+		text-align: center
+	&__features-feature-desc
+		font-family: 'GothamBook'
+		font-size: 15px
+		text-align: center
+	
+.akita-first
+	display: flex
+	&__left
+		width: 50%
+		background-color: #222222
+		color: #fff
+	&__right
+		width: 50%
+		background-size: cover
+		background-image: url("../img/akita1.png")
+		background-color: #000000
+	&__info
+		padding-top: 75px
+		padding-bottom: 10px
+		font-family: 'GothamBook'
+		font-size: 13px
+	&__info-date
+		padding-right: 15px
+		border-right: 1px solid white
+	&__info-topic
+		padding-left: 13px
+	&__title
+		font-family: 'GothamMedium'
+		font-size: 25px
+		text-transform: uppercase
+		padding-bottom: 30px
+	&__text
+		font-size: 15px
+		max-width: 470px
+		padding-bottom: 110px
+
+.akita-second
+	display: flex
+	&__left
+		width: 50%
+		background-size: cover
+		background-image: url("../img/akita2.png")
+		background-color: #000000
+	&__right
+		width: 50%
+		background-color: #f3f3f3
+		color: #222222
+	&__info
+		padding-top: 75px
+		padding-bottom: 10px
+		font-family: 'GothamBook'
+		font-size: 13px
+	&__info-date
+		padding-right: 15px
+		border-right: 1px solid white
+	&__info-topic
+		padding-left: 13px
+	&__title
+		font-family: 'GothamMedium'
+		font-size: 25px
+		text-transform: uppercase
+		padding-bottom: 30px
+	&__text
+		font-size: 15px
+		max-width: 470px
+		padding-bottom: 110px
+		
+.blog
+	padding-top: 150px
+	padding-bottom: 100px
+	position: relative
+	&:before
+		z-index: -1
+		content: 'B'
+		font-size: 247px
+		font-family: 'RobotoBoldCondensed'
+		color: #e2e2e2
+		top: 190px
+		@include centerer
+	&__title
+		font-family: 'GothamMedium'
+		font-size: 38px
+		text-transform: uppercase
+		text-align: center
+		color: #222222
+	&__subtitle
+		font-family: 'GothamBook'
+		font-size: 30px
+		text-align: center
+		color: #222222
+		padding-top: 100px
+	&__campaigns
+		margin-top: 70px
+		display: flex
+	&__campaigns-campaign
+		max-width: 270px
+		margin: 0 auto
+	&__campaigns-campaign-wrapper
+		display: flex
+		justify-content: center
+	&__campaigns-campaign-img
+		height: 275px
+		background-size: cover
+		background-color: #ffffff
+	&__campaigns-campaign-img--first, &__campaigns-campaign-img--fourth
+		background-image: url("../img/lets_blog1.png")
+	&__campaigns-campaign-img--second
+		background-image: url("../img/lets_blog2.png")
+	&__campaigns-campaign-img--third
+		background-image: url("../img/lets_blog3.png")
+	&__campaigns-campaign-title
+		font-family: 'GothamMedium'
+		font-size: 17px
+		color: #11749e
+		text-transform: uppercase
+		padding-top: 35px
+		padding-bottom: 15px
+		text-align: center
+	&__campaigns-campaign-desc
+		font-family: 'GothamBook'
+		font-size: 14px
+		text-align: center
+		color: #222222
+
+.notes
+	background-color: #11749e
+	padding-top: 100px
+	padding-bottom: 150px
+	&__note
+		display: flex
+		align-items: center
+	.fa-edit
+		width: 70px
+		height: 70px
+		color: #fff
+	&__note-text
+		padding-left: 30px
+		font-family: 'GothamBook'
+		font-size: 14px
+		color: #fff
+		
+.phone
+	padding-top: 95px
+	padding-bottom: 95px
+	background-size: cover
+	background-image: url("../img/phone_back.png")
+	background-color: #000000
+	&__left
+		padding-top: 120px
+	&__left-title
+		font-family: 'GothamMedium'
+		font-size: 25px
+		color: #fff
+		text-transform: uppercase
+		padding-bottom: 25px
+	&__left-text
+		font-family: 'GothamBook'
+		font-size: 15px
+		color: #fff
+		padding-bottom: 55px
+	&__left-btn
+		font-size: 15px
+		padding-left: 20px
+		margin-bottom: 20px
+		cursor: pointer
+	&__left-btn--design
+		padding-right: 130px
+	&__left-btn--code
+		padding-right: 210px
+	&__left-btn--layout
+		padding-right: 150px
+	
+.team
+	padding-top: 150px
+	padding-bottom: 100px
+	position: relative
+	&:before
+		z-index: -1
+		content: 'T'
+		font-size: 247px
+		font-family: 'RobotoBoldCondensed'
+		color: #e2e2e2
+		top: 190px
+		@include centerer
+	&__title
+		font-family: 'GothamMedium'
+		font-size: 38px
+		text-transform: uppercase
+		text-align: center
+		color: #222222
+	&__subtitle
+		font-family: 'GothamBook'
+		font-size: 30px
+		text-align: center
+		color: #222222
+		padding-top: 130px
+	&__members
+		width: 100%
+		margin-top: 60px
+		display: flex
+	&__members-member
+		max-width: 270px
+		margin: 0 auto
+		position: relative
+	&__members-member-img
+		height: 390px
+		background-size: cover
+		background-color: #ffffff
+	&__members-member-wrapper
+		background-color: #fff
+		text-align: center
+		width: 215px
+		padding-top: 20px
+		padding-bottom: 20px
+		@include centerer
+	&__members-member-name
+		font-family: 'GothamMedium'
+		font-size: 15px
+		text-transform: uppercase
+		color: #11749e
+		padding-bottom: 5px
+	&__members-member-post
+		font-family: 'GothamMedium'
+		font-size: 15px
+		text-align: center
+		color: #000
+	&__members-member-img--john
+		background-image: url("../img/john_snow.png")
+	&__members-member-img--sansa
+		background-image: url("../img/sansa.png")
+	&__members-member-img--david
+		background-image: url("../img/david.png")
+	&__members-member-img--lady
+		background-image: url("../img/photo_sansa.png")
+
+.message
+	padding-top: 210px
+	padding-bottom: 95px
+	position: relative
+	background-image: url("../img/form_back.png")
+	background-size: cover
+	&:before
+		content: 'C'
+		font-size: 247px
+		font-family: 'RobotoBoldCondensed'
+		color: #fff
+		opacity: 0.18
+		top: 240px
+		@include centerer
+	&__title
+		font-family: 'GothamMedium'
+		font-size: 38px
+		text-transform: uppercase
+		text-align: center
+		color: #fff
+	&__form-textarea
+		margin-top: 35px
+		margin-bottom: 40px
+	&__form
+		z-index: 100
+		margin-top: 140px
+		input[type=text], textarea
+			width: 100%
+			padding: 12px 20px
+			border: 1px solid #fff
+			background: none
+			font-size: 15px
+			color: #fff
+			outline: none
+		textarea
+			height: 145px
+		input[type=submit]
+			font-size: 24px
+			padding: 15px 70px
+			display: block
+			margin: 0 auto
+			border: none
+			border-radius: none
+			cursor: pointer
+
+#map
+    width: 100%
+    height: 330px
+	
+.footer
+	background-color: #222222
+	padding-top: 40px
+	padding-bottom: 40px
+	color: #fff
+	font-size: 12px
+	font-family: 'RobotoRegular'
+	&__design
+		display: flex
+		align-items: center
+	&__design-bee
+		padding-left: 5px
+		padding-right: 5px
