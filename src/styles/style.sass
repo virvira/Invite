@@ -100,12 +100,15 @@ header
 		font-family: 'GothamBold'
 		font-size: 152px
 		text-transform: uppercase
-		@media screen and (min-width: 991.98px) and (max-width: 1199.98px) 
+		@media screen and (min-width: 991.98px) and (max-width: 1400px) 
 			font-size: 120px
 			line-height: 130px
-		@media screen and (max-width: 991.98px)
+		@media screen and (min-width: 767.98px) and (max-width: 991.98px)
 			font-size: 90px
 			line-height: 100px
+		@media screen and (min-width: 375px) and (max-width: 767.98px)
+			font-size: 50px
+			line-height: 60px
 	&__pres-subtitle
 		padding: 0 auto
 		font-family: 'GothamMedium'
@@ -113,9 +116,9 @@ header
 		text-transform: uppercase
 		color: #11749e
 		letter-spacing: 0.8em
-		@media screen and (max-width: 991.98px)
-			font-size: 20px
-			
+		@media screen and (min-width: 375px) and (max-width: 991.98px)
+			font-size: 18px
+			letter-spacing: 0
 	&__down
 		display: flex
 		flex-direction: column
@@ -138,6 +141,13 @@ header
 	display: flex
 	justify-content: space-between
 	align-items: center
+	&__mobicon
+		padding-top: 20px
+		padding-bottom: 20px
+		padding-left: 20px
+		.fa-bars
+			width: 60px
+			height: 60px
 	&__logo
 		padding-top: 8px
 	&__logo-square1
@@ -179,8 +189,6 @@ header
 	&__icons
 		display: flex
 		justify-content: space-between
-		@media screen and (max-width: 1199.98px)
-			display: none
   
 .weare
 	padding-top: 160px
@@ -188,6 +196,8 @@ header
 	background-color: #11749e
 	color: #fff
 	position: relative
+	@include media-breakpoint-down(md)
+		padding-bottom: 60px
 	&:before
 		content: 'W'
 		font-size: 247px
@@ -201,12 +211,20 @@ header
 		font-size: 38px
 		text-transform: uppercase
 		text-align: center
+		@media screen and (min-width: 375px) and (max-width: 767.98px)
+			font-size: 30px
 	&__features
+		padding: 5px
+		width: 100%
 		margin-top: 135px
 		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
 	&__features-feature
-		max-width: 270px
+		max-width: 250px
 		margin: 0 auto
+		@media screen and (max-width: 991.98px)
+			padding-bottom: 50px
 	&__features-feature-wrapper
 		display: flex
 		justify-content: center
@@ -235,11 +253,15 @@ header
 		width: 50%
 		background-color: #222222
 		color: #fff
+		@include media-breakpoint-down(md)
+			width: 100%
 	&__right
 		width: 50%
 		background-size: cover
 		background-image: url("../img/akita1.png")
 		background-color: #000000
+		@include media-breakpoint-down(md)
+			display: none
 	&__info
 		padding-top: 75px
 		padding-bottom: 10px
@@ -267,10 +289,14 @@ header
 		background-size: cover
 		background-image: url("../img/akita2.png")
 		background-color: #000000
+		@include media-breakpoint-down(md)
+			display: none
 	&__right
 		width: 50%
 		background-color: #f3f3f3
 		color: #222222
+		@include media-breakpoint-down(md)
+			width: 100%
 	&__info
 		padding-top: 75px
 		padding-bottom: 10px
@@ -295,6 +321,8 @@ header
 	padding-top: 150px
 	padding-bottom: 100px
 	position: relative
+	@include media-breakpoint-down(md)
+		padding-bottom: 50px
 	&:before
 		z-index: -1
 		content: 'B'
@@ -309,18 +337,25 @@ header
 		text-transform: uppercase
 		text-align: center
 		color: #222222
+		@media screen and (min-width: 375px) and (max-width: 767.98px)
+			font-size: 30px
 	&__subtitle
 		font-family: 'GothamBook'
 		font-size: 30px
 		text-align: center
 		color: #222222
 		padding-top: 100px
+		@media screen and (min-width: 375px) and (max-width: 767.98px)
+			font-size: 24px
 	&__campaigns
 		margin-top: 70px
 		display: flex
+		flex-wrap: wrap
 	&__campaigns-campaign
 		max-width: 270px
 		margin: 0 auto
+		@include media-breakpoint-down(md)
+			padding-bottom: 50px
 	&__campaigns-campaign-wrapper
 		display: flex
 		justify-content: center
@@ -352,9 +387,13 @@ header
 	background-color: #11749e
 	padding-top: 100px
 	padding-bottom: 150px
+	@include media-breakpoint-down(md)
+			padding-bottom: 50px
 	&__note
 		display: flex
 		align-items: center
+		@include media-breakpoint-down(md)
+			padding-bottom: 50px
 	.fa-edit
 		width: 70px
 		height: 70px
@@ -371,6 +410,8 @@ header
 	background-size: cover
 	background-image: url("../img/phone_back.png")
 	background-color: #000000
+	@include media-breakpoint-down(md)
+			padding-top: 0px
 	&__left
 		padding-top: 120px
 	&__left-title
@@ -391,15 +432,23 @@ header
 		cursor: pointer
 	&__left-btn--design
 		padding-right: 130px
+		@include media-breakpoint-down(xs)
+			padding-right: 30px
 	&__left-btn--code
 		padding-right: 210px
+		@include media-breakpoint-down(xs)
+			padding-right: 115px
 	&__left-btn--layout
 		padding-right: 150px
+		@include media-breakpoint-down(xs)
+			padding-right: 60px
 	
 .team
 	padding-top: 150px
 	padding-bottom: 100px
 	position: relative
+	@include media-breakpoint-down(md)
+		padding-bottom: 50px
 	&:before
 		z-index: -1
 		content: 'T'
@@ -414,6 +463,8 @@ header
 		text-transform: uppercase
 		text-align: center
 		color: #222222
+		@media screen and (min-width: 375px) and (max-width: 767.98px)
+			font-size: 30px
 	&__subtitle
 		font-family: 'GothamBook'
 		font-size: 30px
@@ -424,10 +475,13 @@ header
 		width: 100%
 		margin-top: 60px
 		display: flex
+		flex-wrap: wrap
 	&__members-member
 		max-width: 270px
 		margin: 0 auto
 		position: relative
+		@include media-breakpoint-down(md)
+			padding-bottom: 80px
 	&__members-member-img
 		height: 390px
 		background-size: cover
@@ -465,6 +519,8 @@ header
 	position: relative
 	background-image: url("../img/form_back.png")
 	background-size: cover
+	@include media-breakpoint-down(md)
+		padding-top: 120px
 	&:before
 		content: 'C'
 		font-size: 247px
@@ -473,15 +529,24 @@ header
 		opacity: 0.18
 		top: 240px
 		@include centerer
+		@include media-breakpoint-down(md)
+				top: 170px	
 	&__title
 		font-family: 'GothamMedium'
 		font-size: 38px
 		text-transform: uppercase
 		text-align: center
 		color: #fff
+		@media screen and (min-width: 375px) and (max-width: 767.98px)
+			font-size: 30px
 	&__form-textarea
 		margin-top: 35px
 		margin-bottom: 40px
+		@include media-breakpoint-down(md)
+			margin-top: 0px
+	&__form-input
+		@include media-breakpoint-down(md)
+			margin-bottom: 35px
 	&__form
 		z-index: 100
 		margin-top: 140px
@@ -503,6 +568,8 @@ header
 			border: none
 			border-radius: none
 			cursor: pointer
+		@include media-breakpoint-down(md)
+			margin-top: 100px
 
 #map
     width: 100%
@@ -515,9 +582,140 @@ header
 	color: #fff
 	font-size: 12px
 	font-family: 'RobotoRegular'
+	@include media-breakpoint-down(md)
+		text-align: center
 	&__design
 		display: flex
 		align-items: center
+		@include media-breakpoint-down(md)
+			justify-content: center
 	&__design-bee
 		padding-left: 5px
 		padding-right: 5px
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro')
+
+$aqua: #86387E
+$plum: #474747
+
+$nav-toggle-bar-color: white
+$nav-toggle-bar-height: 0.4rem
+$nav-toggle-bar-width: 3.6rem
+$nav-background: $aqua
+$nav-color: white
+$nav-width: 20rem
+$z-nav-toggle: 2
+$z-nav: 1
+
+
+@mixin box-sizing($box-sizing: border-box) 
+	-webkit-box-sizing: $box-sizing
+	-moz-box-sizing: $box-sizing
+	box-sizing: $box-sizing
+
+
+@mixin center-vertically($position: absolute) 
+	position: $position
+	top: 50%
+	-webkit-transform: translateY(-50%)
+	-ms-transform: translateY(-50%)
+	transform: translateY(-50%)
+
+
+@mixin text-size-adjust 
+	-webkit-text-size-adjust: 100%
+	-moz-text-size-adjust: 100%
+	-ms-text-size-adjust: 100%
+
+
+@mixin transform($transform) 
+	-ms-transform: $transform
+	-webkit-transform: $transform
+	transform: $transform
+
+
+@mixin transition($parameters: all 0.5s ease) 
+	-webkit-transition: $parameters
+	-moz-transition: $parameters
+	-ms-transition: $parameters
+	-o-transition: $parameters
+	transition: $parameters
+
+
+@mixin user-select 
+	-webkit-user-select: none
+	-moz-user-select: none
+	user-select: none
+	@include box-sizing
+	@include text-size-adjust
+	&:focus 
+		outline: none
+a
+  color: inherit
+  cursor: pointer
+  text-decoration: none
+  &:hover
+	  opacity: 0.8
+
+.nav-toggle 
+	@include user-select
+	cursor: pointer
+	height: 5 * $nav-toggle-bar-height
+	left: 2rem
+	position: fixed
+	top: 2rem
+	width: $nav-toggle-bar-width
+	z-index: $z-nav-toggle
+	&:hover
+		opacity: 0.8
+
+	.nav-toggle-bar,
+	.nav-toggle-bar::after,
+	.nav-toggle-bar::before
+		@include center-vertically
+		@include transition(all 0.5s ease)
+		background: $nav-toggle-bar-color
+		content: ''
+		height: $nav-toggle-bar-height
+		width: 100%
+	
+	.nav-toggle-bar
+		margin-top: 0
+	.nav-toggle-bar::after
+		margin-top: 2 * $nav-toggle-bar-height
+	.nav-toggle-bar::before
+		margin-top: -2 * $nav-toggle-bar-height
+	&.expanded .nav-toggle-bar
+		background: transparent
+	&.expanded .nav-toggle-bar::after,
+	&.expanded .nav-toggle-bar::before
+		background: $nav-color
+		margin-top: 0
+
+	&.expanded .nav-toggle-bar::after
+		@include transform(rotate(45deg))
+	&.expanded .nav-toggle-bar::before
+		@include transform(rotate(-45deg))
+
+.nav 
+	@include transition(left 0.5s ease)
+	background: $nav-background
+	color: $nav-color
+  cursor: pointer
+	font-size: 2rem
+	height: 100vh
+	left: -$nav-width
+	padding: 6rem 2rem 2rem 2rem
+	position: fixed
+	top: 0
+	width: $nav-width
+	z-index: $z-nav
+	&.expanded
+		left: 0
+
+	ul
+		@include center-vertically
+		list-style: none
+		margin: 0
+		padding: 0

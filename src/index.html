@@ -12,6 +12,24 @@
 		<div class="container">
 			<div class="row">
 			  <div class="main-header">
+				<div class="d-md-none">
+					<div class="main-header__mobicon" onclick="openMenu()">
+						<i class="fas fa-bars"></i>
+					</div>
+				</div>
+				<div class="nav-toggle">
+					<div class="nav-toggle-bar"></div>
+				</div>
+				<nav class="nav">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Pages</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Extensions</a></li>
+						<li><a href="#">Tutorials</a></li>
+						<li><a href="#">Contact us</a></li>
+					</ul>
+				</nav>
 			    <div class="col-lg-1 d-none d-lg-block">
 					<div class="main-header__logo">
 						<div class="main-header__logo-square1">
@@ -19,7 +37,7 @@
 						<div class="main-header__logo-square2">CS</div>
 					</div>
 				</div>
-				<div class="col-xl-7 offset-xl-2 col-lg-8 offset-lg-1 col-md-12">
+				<div class="col-xl-7 offset-xl-2 col-lg-8 offset-lg-1 col-md-12 d-none d-md-block">
 					<nav class="main-header__menu">
 						<div class="main-header__menu-elem"><a href="#">Home</a></div>
 						<div class="main-header__menu-elem"><a href="#">Pages</a></div>
@@ -29,7 +47,7 @@
 						<div class="main-header__menu-elem"><a href="#">Contact us</a></div>
 					</nav>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-2 d-none d-lg-block">
 					<div class="main-header__icons">
 						<div class="main-header__icons-icon">
 							<i class="fab fa-facebook-f"></i>
@@ -79,6 +97,7 @@
 		
 		<div class="row">
 		<div class="weare__features">
+		<div class="col-lg-3 col-md-6">
 		  <div class="weare__features-feature">
 			<div class="weare__features-feature-wrapper">
 				<span class="dot weare__features-feature-icon"><i class="far fa-edit"></i></span>
@@ -90,6 +109,8 @@
 				Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
 			</div>
 		  </div>
+		</div>
+		<div class="col-lg-3 col-md-6">
 		  <div class="weare__features-feature">
 		  <div class="weare__features-feature-wrapper">
 			<span class="dot weare__features-feature-icon"><i class="far fa-edit"></i></span>
@@ -101,6 +122,8 @@
 				Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
 			</div>
 		  </div>
+		</div>
+		<div class="col-lg-3 col-md-6">
 		  <div class="weare__features-feature">
 		  <div class="weare__features-feature-wrapper">
 			<span class="dot weare__features-feature-icon"><i class="fas fa-search"></i></span>
@@ -112,6 +135,8 @@
 				Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
 			</div>
 		  </div>
+		</div>
+		<div class="col-lg-3 col-md-6">
 		  <div class="weare__features-feature">
 		  <div class="weare__features-feature-wrapper">
 			<span class="dot weare__features-feature-icon"><i class="far fa-comment"></i></span>
@@ -127,13 +152,14 @@
 		</div>
 		</div>
 		</div>
+		</div>
 	  </div>
 	  
 	  <div class="akita-first">
 	  
 	    <div class="akita-first__left">
 		<div class="container">
-		<div class="col-md-7 offset-md-4">
+		<div class="col-lg-7 offset-lg-4 col-md-12">
 		<div class="akita-first__info">
 			<span class="akita-first__info-date">
 				Jan 4, 2016
@@ -168,7 +194,7 @@
 	  
 	    <div class="akita-second__right">
 		<div class="container">
-		<div class="col-md-7 offset-md-2">
+		<div class="col-lg-7 offset-lg-2 col-md-12">
 		<div class="akita-second__info">
 			<span class="akita-second__info-date">
 				Jan 4, 2016
@@ -208,7 +234,7 @@
 				
 				<div class="row">
 					<div class="blog__campaigns">
-					  <div class="col-md-3">
+					  <div class="col-lg-3 col-md-6">
 						<div class="blog__campaigns-campaign">
 							<div class="blog__campaigns-campaign-img blog__campaigns-campaign-img--first"></div>
 							<div class="blog__campaigns-campaign-title">
@@ -219,7 +245,7 @@
 							</div>
 						</div>
 					  </div>
-					  <div class="col-md-3">
+					  <div class="col-lg-3 col-md-6">
 						<div class="blog__campaigns-campaign">
 							<div class="blog__campaigns-campaign-img blog__campaigns-campaign-img--second"></div>
 							<div class="blog__campaigns-campaign-title">
@@ -230,7 +256,7 @@
 							</div>
 						</div>
 					  </div>
-					  <div class="col-md-3">
+					  <div class="col-lg-3 col-md-6">
 						<div class="blog__campaigns-campaign">
 							<div class="blog__campaigns-campaign-img blog__campaigns-campaign-img--third"></div>
 							<div class="blog__campaigns-campaign-title">
@@ -241,7 +267,7 @@
 							</div>
 						</div>
 					  </div>
-					  <div class="col-md-3">
+					  <div class="col-lg-3 col-md-6">
 						<div class="blog__campaigns-campaign">
 							<div class="blog__campaigns-campaign-img blog__campaigns-campaign-img--fourth"></div>
 							<div class="blog__campaigns-campaign-title">
@@ -286,7 +312,7 @@
 	  <div class="phone">
 		<div class="container">
 		  <div class="row">
-			<div class="col-md-5">
+			<div class="col-lg-5 col-md-12">
 				<div class="phone__left">
 					<div class="phone__left-title">
 						Akita Inu Dog
@@ -299,9 +325,9 @@
 					<a href="#" class="btn phone__left-btn phone__left-btn--layout">Different headers & layout</a>
 				</div>
 			</div>
-			<div class="col-md-4 offset-md-2">
+			<div class="col-lg-4 offset-lg-2 d-none d-lg-block">
 				<div class="phone__right">
-					<img src="../assets/phone.png" alt="phone">
+					<img src="img/phone.png" alt="phone">
 				</div>
 			</div>
 		  </div>
@@ -320,7 +346,7 @@
 				
 				<div class="row">
 					<div class="team__members">
-					  <div class="col-md-3">
+					  <div class="col-lg-3 col-md-6">
 						<div class="team__members-member">
 							<div class="team__members-member-img team__members-member-img--john"></div>
 							<div class="team__members-member-wrapper">
@@ -333,7 +359,7 @@
 							</div>
 						</div>
 					  </div>
-					  <div class="col-md-3">
+					  <div class="col-lg-3 col-md-6">
 						<div class="team__members-member">
 							<div class="team__members-member-img team__members-member-img--sansa"></div>
 							<div class="team__members-member-wrapper">
@@ -346,7 +372,7 @@
 							</div>
 						</div>
 					  </div>
-					  <div class="col-md-3">
+					  <div class="col-lg-3 col-md-6">
 						<div class="team__members-member">
 							<div class="team__members-member-img team__members-member-img--david"></div>
 							<div class="team__members-member-wrapper">
@@ -359,7 +385,7 @@
 							</div>
 						</div>
 					  </div>
-					  <div class="col-md-3">
+					  <div class="col-lg-3 col-md-6">
 						<div class="team__members-member">
 							<div class="team__members-member-img team__members-member-img--lady"></div>
 							<div class="team__members-member-wrapper">
@@ -387,37 +413,36 @@
 			</div>
 			<form name="MesForm" id="MesForm" class="message__form">
 				<div class="row">
-				  <div class="col-md-4">
-					<input type="text" id="name" name="Name" placeholder="Name">
+				  <div class="col-lg-4 col-md-12">
+					<input type="text" id="name" class="message__form-input" name="Name" placeholder="Name">
 				  </div>
-				  <div class="col-md-4">
-					<input type="text" id="email" name="Email" placeholder="Email">
+				  <div class="col-lg-4 col-md-12">
+					<input type="text" id="email" class="message__form-input" name="Email" placeholder="Email">
 				  </div>
-				  <div class="col-md-4">
-					<input type="text" id="phone" name="Phone" placeholder="Phone">
+				  <div class="col-lg-4 col-md-12">
+					<input type="text" id="phone" class="message__form-input" name="Phone" placeholder="Phone">
 				  </div>
 				</div>
 				<textarea class="message__form-textarea" id="mes" name="Message" placeholder="Message"></textarea>
 				<input class="btn" type="submit" id="SubmitForm" value="Submit">
 			</form>
-			<input class="btn" type="button" value="privet" onclick="validateForm()">
 		</div>
 	  </div>
 	  
-      <div id="map"></div>
+      <!--<div id="map"></div>-->
 	  
 	  <footer class="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-lg-3 col-md-12">
 					<div class="footer__copyright">
 						© 2016 PSDfreebies.com – All Right Reserved
 					</div>
 				</div>
-				<div class="col-md-3 offset-md-6">
+				<div class="col-lg-3 offset-lg-6 col-md-12">
 					<div class="footer__design">
 						Design by:
-						<span class="footer__design-bee"><img src="../assets/bee.png" alt="Bee"></span>
+						<span class="footer__design-bee"><img src="img/bee.png" alt="Bee"></span>
 						PSDFreebies.com
 					<div>
 				</div>

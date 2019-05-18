@@ -3,11 +3,11 @@
 
 // yandex maps
 ymaps.ready(init);
- 
+var f = true; 
+
 function init(){     
  
     var myMap;
- 
     myMap = new ymaps.Map("map", {
         center: [45.00561520535352,-0.4803475000000338],
         zoom: 13
@@ -19,7 +19,8 @@ function init(){
         position: {top: 15, left: 15}
     });
 	
-	myMap.panes.get('ground').getElement().style.filter = 'invert(90%)';
+    myMap.panes.get('ground').getElement().style.filter = 'invert(90%)';
+    
 }
 
 // sticky header
@@ -61,9 +62,26 @@ function validateForm() {
 	return true;
 }
 
+(function() {
+
+	var hamburger = {
+		navToggle: document.querySelector('.nav-toggle'),
+		nav: document.querySelector('nav'),
+
+		doToggle: function(e) {
+			e.preventDefault();
+			this.navToggle.classList.toggle('expanded');
+			this.nav.classList.toggle('expanded');
+		}
+	};
+
+	hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
+
+}());
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/style.css';
-import './sass/style.sass';
+// import './css/style.css';
+import '../src/styles/style.sass';
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
